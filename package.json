@@ -15,6 +15,7 @@
     "mobile",
     "react native"
   ],
+  "private": true,
   "repository": {
     "type": "git",
     "url": "http://github.com/ant-design/ant-design-mobile-rn"
@@ -27,8 +28,6 @@
     "es"
   ],
   "license": "MIT",
-  "main": "lib/index.js",
-  "module": "es/index.js",
   "dependencies": {
     "@ant-design/icons-react-native": "^1.0.2",
     "@bang88/react-native-ultimate-listview": "^3.3.0",
@@ -40,9 +39,13 @@
     "react-native-menu": "^0.23.0",
     "react-native-safe-area-view": "^0.11.0",
     "react-native-swipeout": "^2.3.6",
-    "utility-types": "^2.1.0"
+    "utility-types": "^2.1.0",
+    "expo": "^31.0.2",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz"
   },
   "devDependencies": {
+    "babel-preset-expo": "^5.0.0",
     "@babel/core": "^7.2.0",
     "@types/prop-types": "^15.5.7",
     "@types/react": "~16.7.13",
@@ -91,13 +94,10 @@
     "qrcode.react": "^0.8.0",
     "raf": "^3.4.0",
     "rc-form": "2.2.7",
-    "react": "^16.7.0-alpha.2",
     "react-copy-to-clipboard": "^5.0.0",
     "react-document-title": "^2.0.1",
-    "react-dom": "^16.7.0-alpha.2",
     "react-github-button": "^0.1.9",
     "react-intl": "^2.2.3",
-    "react-native": "^0.57.7",
     "react-native-mocker": "^0.0.12",
     "react-navigation": "^2.18.2",
     "react-test-renderer": "^16.7.0-alpha.2",
@@ -105,48 +105,11 @@
     "ts-jest": "^23.10.4",
     "typescript": "^3.2.2"
   },
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "lint": "npm run tslint && npm run srclint && npm run applint",
-    "srclint": "eslint site scripts --ext '.js,.jsx'",
-    "tslint": "antd-tools run ts-lint && npm run compile && rm -rf lib",
-    "tslint-fix": "antd-tools run ts-lint-fix && npm run compile && rm -rf lib",
-    "applint": "eslint rn-kitchen-sink --ext '.js'",
-    "pre-publish": "npm run test:all",
-    "prepublish": "antd-tools run guard",
-    "prepare": "antd-tools run guard",
-    "prepublishOnly": "antd-tools run guard",
-    "test": "jest --config .jest.config.js",
-    "test:all": "./scripts/test-all.sh",
-    "compile": "cross-env BABEL_ENV=dist antd-tools run compile",
-    "watch-tsc": "antd-tools run watch-tsc",
-    "clean": "antd-tools run clean",
-    "start": "cross-env NODE_ENV=development cross-env DEMO_ENV=react bisheng start -c ./site/bisheng.desktop.config.js",
-    "site": "cross-env NODE_ENV=production cross-env DEMO_ENV=react bisheng build -c ./site/bisheng.desktop.config.js && cp CNAME _site",
-    "deploy": "npm run clean && npm run site && bisheng gh-pages --push-only",
-    "pub": "cross-env BABEL_ENV=dist antd-tools run pub",
-    "rn-start": "node node_modules/react-native/local-cli/cli.js start",
-    "ios": "concurrently \"npm run watch-tsc\" \"npm run _ios\"",
-    "android": "concurrently \"npm run watch-tsc\" \"npm run _android\"",
-    "_ios": "node node_modules/react-native/local-cli/cli.js run-ios --project-path rn-kitchen-sink/ios --scheme antd_mobile_rn",
-    "_android": "node node_modules/react-native/local-cli/cli.js run-android --root rn-kitchen-sink",
-    "build-rn-ios": "node scripts/rn-mkdir && node node_modules/react-native/local-cli/cli.js bundle --platform ios --dev false --entry-file rn-kitchen-sink/index.ios.js --bundle-output rn-kitchen-sink/ios/bundle/index.ios.bundle --assets-dest rn-kitchen-sink/ios/bundle",
-    "build-rn-android": "node scripts/rn-mkdir && node node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file rn-kitchen-sink/index.android.js --bundle-output rn-kitchen-sink/android/bundle/index.android.bundle --assets-dest rn-kitchen-sink/android/bundle",
-    "build-rn": "npm run tsc  && npm run build-rn-ios && npm run build-rn-android",
-    "lint-staged": "lint-staged",
-    "lint-staged:ts": "npm run tsc && node node_modules/tslint/bin/tslint -c node_modules/antd-tools/lib/tslint.json components/**/*.tsx",
-    "lint-staged:es": "eslint ./.eslintrc.js",
-    "tsc": "antd-tools run tsc"
-  },
-  "lint-staged": {
-    "components/**/*.tsx": [
-      "npm run lint-staged:ts"
-    ],
-    "{tests,site,scripts,components}/**/*.{js,jsx}": [
-      "npm run lint-staged:es"
-    ]
-  },
-  "typings": "lib/index.d.ts",
-  "pre-commit": [
-    "lint-staged"
-  ]
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
+  }
 }
