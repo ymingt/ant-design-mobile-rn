@@ -14,6 +14,33 @@ toc: false
 
 ---
 
+### 3.0.6
+
+`2019-01-15`
+
+- 修复`image-picker` 报错 `groupTypes` is not supported on Android [#264](https://github.com/ant-design/ant-design-mobile-rn/issues/264)
+- 修复`tab-bar` 不会更新tab内容 [#201](https://github.com/ant-design/ant-design-mobile-rn/issues/201)
+
+### 3.0.5
+
+`2019-01-03`
+
+- 修改`search-bar` icon size [#250](https://github.com/ant-design/ant-design-mobile-rn/pull/250)
+- 修复`input-item` 在`iOS`下换行显示 [#249](https://github.com/ant-design/ant-design-mobile-rn/issues/249)
+- 修复`input-item` clear icon 在`android`下显示不正确 [#248](https://github.com/ant-design/ant-design-mobile-rn/issues/248)
+
+
+### 3.0.4
+
+`2018-12-28`
+
+- 修改`SegmentedControl`默认颜色为主题颜色 [#211](https://github.com/ant-design/ant-design-mobile-rn/pull/211)
+- 允许覆盖`Tabs` `tabBarUnderlineStyle`
+- 完善`SwipeAction` TypeScript类型定义 [#230](https://github.com/ant-design/ant-design-mobile-rn/pull/230)
+- 完善 `Grid` 文档，修改`onClick`属性为`onPress` [#234](https://github.com/ant-design/ant-design-mobile-rn/pull/234)
+- 修复`Modal`循环引用警告 [#242](https://github.com/ant-design/ant-design-mobile-rn/pull/242)
+
+
 ### 3.0.0
 
 `2018-12-15`
@@ -25,12 +52,14 @@ toc: false
 - 更友好的主题支持，方便用户自定义，全新的 `Provider`
 - 重构了所有组件支持自定义局部样式
 - 完善 TypeScript 类型定义
-- Toast现在支持在Modal之上显示
+- Toast 现在支持在 Modal 之上显示
 - bug 修复
 - 完善文档，使用 codesandbox 以及 react-native-web 提供部分组件在线预览
 - 重构 Icon 组件，现在使用 [ant-design-icons](https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-react-native)
+- Toast 移除了 `hide` 方法
+- 修改`Grid`的`onClick`属性为`onPress`
 - 更多组件优化以及使用方式请查看文档
-- 从 2.x 升级到 3.0.0 请查看[upgrade notes](/docs/react/upgrade-notes)
+- 从 2.x 升级到 3.0.0 请查看[upgrade notes](https://rn.mobile.ant.design/docs/react/upgrade-notes-cn)
 
 ### 2.3.0
 

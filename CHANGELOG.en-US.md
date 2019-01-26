@@ -14,11 +14,38 @@ toc: false
 
 ---
 
+
+### 3.0.6
+
+`2019-01-15`
+
+- Fixes `image-picker` `groupTypes` is not supported on Android [#264](https://github.com/ant-design/ant-design-mobile-rn/issues/264)
+- Fixes `tab-bar` does not update component after tab has changed [#201](https://github.com/ant-design/ant-design-mobile-rn/issues/201)
+
+
+### 3.0.5
+
+`2019-01-03`
+
+- Modify `search-bar` icon size [#250](https://github.com/ant-design/ant-design-mobile-rn/pull/250)
+- Fixes `input-item` has new line after blur under `ios` [#249](https://github.com/ant-design/ant-design-mobile-rn/issues/249)
+- Fixes `input-item` clear icon is not displayed correctly under `android` [#248](https://github.com/ant-design/ant-design-mobile-rn/issues/248)
+
+### 3.0.4
+
+`2018-12-28`
+
+- Modify `SegmentedControl` default color to theme color [#211](https://github.com/ant-design/ant-design-mobile-rn/pull/211)
+- Allow overriding `Tabs` `tabBarUnderlineStyle`
+- Improve `SwipeAction` TypeScript type definition [#230](https://github.com/ant-design/ant-design-mobile-rn/pull/230)
+- Improve the `Grid` document and modify the `onClick` property to `onPress` [#234](https://github.com/ant-design/ant-design-mobile-rn/pull/234)
+- Fixed `Modal` circular reference warning [#242](https://github.com/ant-design/ant-design-mobile-rn/pull/242)
+
 ### 3.0.0
 
 `2018-12-15`
 
-** Breaking Changes ** for more informations please checkout [#119](https://github.com/ant-design/ant-design-mobile-rn/issues/119)
+**Breaking Changes** for more informations please checkout [#119](https://github.com/ant-design/ant-design-mobile-rn/issues/119)
 
 - We get a new package name `@ant-design/react-native` from [afc163](https://github.com/afc163). Thanks..
 - Remove the native suffix
@@ -26,8 +53,10 @@ toc: false
 - Improve TypeScript type definitions
 - Bug fixes
 - We can preview our Components online using codesandbox and react-native-web
-- Refactor Icon Component and use [ant-design-icons](https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-react-native) instead
--  Upgrade from 2.x to 3.0.0 please checkout [upgrade notes](/docs/react/upgrade-notes)
+- Refactor Icon Component and use [ant-design-icons](https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-react-native) instead
+- `Toast` has removed method `hide`
+- Change `Grid` property `onClick` to `onPress`
+- Upgrade from 2.x to 3.0.0 please checkout [upgrade notes](https://rn.mobile.ant.design/docs/react/upgrade-notes)
 
 ### 2.3.0
 

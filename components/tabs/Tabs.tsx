@@ -358,6 +358,8 @@ export class Tabs extends React.PureComponent<TabsProps, StateType> {
       tabBarPosition,
       tabBarTextStyle,
       tabBarUnderlineStyle,
+      renderTab,
+      renderUnderline,
       tabs,
     } = this.props;
     return {
@@ -371,6 +373,8 @@ export class Tabs extends React.PureComponent<TabsProps, StateType> {
       tabBarPosition,
       tabBarTextStyle,
       tabBarUnderlineStyle,
+      renderTab,
+      renderUnderline,
       tabs,
       instanceId: this.instanceId,
     };
