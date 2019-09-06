@@ -13,6 +13,12 @@ module.exports = {
       icon: 'https://os.alipayobjects.com/rmsportal/QnAmpSwlfPzjpSL.png',
       module: require('../components/search-bar/demo/basic'),
     },
+    {
+      title: 'TabBar',
+      description: '标签栏',
+      icon: 'https://zos.alipayobjects.com/rmsportal/OZInMeAaDCHtaJU.png',
+      module: require('../components/tab-bar/demo/basic'),
+    },
   ],
   UIVIEWS: [
     {
